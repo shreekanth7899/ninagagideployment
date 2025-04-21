@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="ninagagii.png">
+  <title>Buy Now</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gradient-to-b from-white via-yellow-50 to-yellow-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl w-full max-w-md text-center space-y-6">
+    
+    <h2 class="text-3xl font-bold text-gray-800">Purchase Summary</h2>
+    
+    <p class="text-xl text-gray-700 font-semibold">
+      Rs: <span id="amount-value" class="text-black font-bold"></span>
+    </p>
+
+    <h3 class="text-2xl font-semibold text-blue-600 mt-4">Scan UPI QR Code</h3>
+    
+    <img src="UPI.png" alt="UPI QR Code" class="w-60 h-60 mx-auto rounded-xl shadow-md" />
+
+    <p class="text-gray-600">Use your preferred UPI app to scan and complete the payment.</p>
+    <p class="text-sm text-gray-500">Once payment is done, kindly share the screenshot on WhatsApp. +91 7975168369</p>
+
+    <a href="index.html" class="mt-4 inline-block bg-blue-600 text-white font-medium py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+      Back to Home
+    </a>
+
+    <div class="mt-8 text-left">
+      <h4 class="text-lg font-semibold text-gray-800 mb-2">Terms and Conditions</h4>
+      <ul class="text-sm text-gray-600 list-disc list-inside space-y-2">
+        <li>We do not accept returns or issue refunds once the product is delivered.</li>
+        <li>Product images may vary slightly due to lighting and do not qualify for refund/return.</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-50 mt-6 p-4 rounded-lg text-left">
+      <h4 class="text-lg font-semibold mb-2 text-gray-800">Contact Us</h4>
+      <p class="text-sm text-gray-700"><strong>Phone:</strong> +91 7975168369</p>
+      <p class="text-sm text-gray-700"><strong>Email:</strong> ninagagijs@gmail.com</p>
+      <p class="text-sm text-gray-700"><strong>Address:</strong> Bangalore and Davangere</p>
+    </div>
+
+    <footer class="text-center text-sm text-gray-500 border-t pt-4 mt-4">
+      &copy; 2025 Ninagagi Store. All Rights Reserved.
+    </footer>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const amount = params.get('amount');
+    document.getElementById('amount-value').textContent = amount ? amount : '0';
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="ninagagii.png">
+  <title>Wife-for-Life Hamper</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-white via-yellow-50 to-yellow-100 text-gray-800">
+
+    <header class="bg-gray-800 text-white p-4 fixed top-0 left-0 w-full z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+        
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+<a href="index.html" class="flex items-center space-x-2">
+<img src="ninagagii.png" alt="Logo" class="h-14 w-14">
+<span class="font-semibold text-xl">Ninagagi</span>
+</a>
+</div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        ☰
+        </button>
+        
+        <!-- Navigation -->
+        <nav id="menu" class="hidden md:flex space-x-6">
+        <div class="relative">
+        <button onclick="toggleDropdown()" class="hover:text-yellow-300 flex items-center">
+        Categories ▼
+        </button>
+        <div id="dropdown-menu" class="hidden absolute bg-gray-700 text-white py-2 w-48 mt-1 rounded shadow-lg">
+          <a href="./gifts.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Gift Hampers</a>
+          <a href="./birthdayhamper.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Birthday</a>
+          <a href="./babyhampers.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Baby</a>
+          <a href="./minatures.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Minature Gifts</a>
+          <a href="./returngifts.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Return Gifts</a>
+          <a href="#contact" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Contact</a>
+          </div>
+          </div>
+          </nav>
+          
+          <!-- Cart -->
+          <div class="relative flex items-center space-x-4">
+          <button onclick="viewCart()" class="relative">
+          <img src="cart-icon.png" alt="Cart" class="h-8 w-8">
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2">0</span>
+          </button>
+          </div>
+          </div>
+          
+          <!-- Mobile Dropdown Menu -->
+          <div id="mobile-menu" class="hidden md:hidden bg-gray-700 text-white py-2 px-4">
+          <a href="./gifts.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Gift Hampers</a>
+          <a href="./birthdayhamper.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Birthday</a>
+          <a href="./babyhampers.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Baby</a>
+          <a href="./minatures.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Minature Gifts</a>
+          <a href="./returngifts.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Return Gifts</a>
+          <a href="#contact" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Contact</a>
+          </div>
+        </header>
+        <br>
+        <br>
+        
+
+  <div class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-8">
+    <h1 class="text-3xl font-bold mb-4 text-center">Wife-for-Life Hamper</h1>
+
+    <!-- Images -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <img src="bhamper.png" alt="Surprise Hamper Image 1" class="w-full h-64 object-cover rounded-lg shadow-sm">
+      <img src="bhamper1a.jpeg" alt="Surprise Hamper Image 2" class="w-full h-64 object-cover rounded-lg shadow-sm">
+      <!-- <img src="bhamper1b.jpeg" alt="Surprise Hamper Image 3" class="w-full h-64 object-cover rounded-lg shadow-sm"> -->
+    </div>
+
+    <!-- Price and Description -->
+    <div class="mb-6">
+      <p class="text-xl font-semibold text-green-600 mb-2">Price: Rs. 2499</p>
+      <p class="text-base leading-relaxed">
+        Celebrate the bride-to-be with our Wife-for-Life Hamper, packed with everything she needs to relax, indulge, and enjoy the lead-up to her big day. 
+        From luxurious pampering essentials to delightful treats, this hamper is the perfect mix of fun and relaxation, ensuring she’s ready for the adventure of a lifetime!</p>
+    </div>
+
+    <!-- What's Included -->
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">What's Inside:</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Cosmetics</li>
+        <li>Chocolates</li>
+        <li>Face mask</li>
+        <li>Prefume</li>
+        <li>Bangles</li>
+        <li>Bracelets </li>
+        <li>Miniature Arishina and Kumkuma</li>
+        <li>Buntings</li>
+        <li>Earrings</li>
+        <li>Flowers</li>
+        <li>Clips and Scrunchies</li>
+        <li>Cork Lights</li>
+      </ul>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row sm:space-x-4">
+      <button onclick="addToCart('Wife-for-Life Hamper', 2499)" class="bg-blue-600 text-white py-2 px-6 rounded-lg mb-2 sm:mb-0 hover:bg-blue-700 transition">
+        Add to Cart
+      </button>
+      <button onclick="location.href='buy.html?amount=2499'" class="bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 transition">
+        Buy Now
+      </button>
+    </div>
+
+  </div>
+  <section id="contact" class="mt-12 bg-white p-6 rounded-lg">
+    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+    <p>Phone: +91 7975168369 </p>
+    <p>Email: ninagagijs@gmail.com</p>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+    <p>&copy; 2025 Ninagagi Store. All Rights Reserved.</p>
+    </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>

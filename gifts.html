@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="ninagagii.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gifts</title>
+        <!-- Updated link to Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        </head>
+<body class="bg-gradient-to-b from-white via-yellow-50 to-yellow-100 font-sans">
+
+    <header class="bg-gray-800 text-white p-4 fixed top-0 left-0 w-full z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+        
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+<a href="index.html" class="flex items-center space-x-2">
+<img src="ninagagii.png" alt="Logo" class="h-14 w-14">
+<span class="font-semibold text-xl">Ninagagi</span>
+</a>
+</div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        ☰
+        </button>
+        
+        <!-- Navigation -->
+        <nav id="menu" class="hidden md:flex space-x-6">
+        <div class="relative">
+        <button onclick="toggleDropdown()" class="hover:text-yellow-300 flex items-center">
+        Categories ▼
+        </button>
+        <div id="dropdown-menu" class="hidden absolute bg-gray-700 text-white py-2 w-48 mt-1 rounded shadow-lg">
+            <a href="./gifts.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Gift Hampers</a>
+            <a href="./birthdayhamper.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Birthday</a>
+            <a href="./babyhampers.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Baby</a>
+            <a href="./minatures.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Minature Gifts</a>
+            <a href="./returngifts.html" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Return Gifts</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-gray-600" onclick="closeDropdown()">Contact</a>
+            </div>
+            </div>
+            </nav>
+            
+            <!-- Cart -->
+            <div class="relative flex items-center space-x-4">
+            <button onclick="viewCart()" class="relative">
+            <img src="cart-icon.png" alt="Cart" class="h-8 w-8">
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2">0</span>
+            </button>
+            </div>
+            </div>
+            
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-700 text-white py-2 px-4">
+            <a href="./gifts.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Gift Hampers</a>
+            <a href="./birthdayhamper.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Birthday</a>
+            <a href="./babyhampers.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Baby</a>
+            <a href="./minatures.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Minature Gifts</a>
+            <a href="./returngifts.html" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Return Gifts</a>
+            <a href="#contact" class="block py-2 hover:bg-gray-600" onclick="closeMobileMenu()">Contact</a>
+            </div>
+        </header>
+        
+        <br>
+        <br>
+        <br>
+
+    <section id="hampers" class="mt-12 bg-white p-6 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">Gift Hampers</h2>
+        <main class="container mx-auto my-10 px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Luxuary Hamper & Natural Flowers</h2>
+        <img onclick="location.href='hamper1.html'" src="hamper1.png" alt="Product 1" class="w-full h-80 object-cover rounded-lg">
+        <div class="mt-4 flex justify-between items-center">
+        <span class="text-lg font-semibold">Rs: 2300</span>
+        <button onclick="addToCart('Luxuary Hamper & Natural Flowers', 2300)" class="bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+        </div>
+        <button onclick="location.href='buy.html?amount=2300'" class="mt-2 w-full bg-green-500 text-white py-2 rounded">Buy Now</button>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Guess What's Inside?</h2>
+        <img onclick="location.href='hamper2.html'" src="hamper2.png" alt="Product 2" class="w-full h-80 object-cover rounded-lg">
+        <div class="mt-4 flex justify-between items-center">
+        <span class="text-lg font-semibold">Rs: 3500</span>
+        <button onclick="addToCart('Surprise Hamper Gift', 3500)" class="bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+        </div>
+        <button onclick="location.href='buy.html?amount=3500'" class="mt-2 w-full bg-green-500 text-white py-2 rounded" >Buy Now</button>
+        
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Happy Hamper</h2>
+        <img onclick="location.href='hamper3.html'" src="hamper3.png" alt="Product 2" class="w-full h-80 object-cover rounded-lg">
+        <div class="mt-4 flex justify-between items-center">
+        <span class="text-lg font-semibold">Rs: 1999</span>
+        <button onclick="addToCart('Happy Hamper', 1999)" class="bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+        </div>
+        <button onclick="location.href='buy.html?amount=1999'" class="mt-2 w-full bg-green-500 text-white py-2 rounded" >Buy Now</button>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Happy Basket Hamper</h2>
+        <img onclick="location.href='hamper4.html'" src="hamper4.png" alt="Product 2" class="w-full h-80 object-cover rounded-lg">
+        <div class="mt-4 flex justify-between items-center">
+        <span class="text-lg font-semibold">Rs: 999</span>
+        <button onclick="addToCart('Happy Basket Hamper', 999)" class="bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+        </div>
+        <button onclick="location.href='buy.html?amount=999'" class="mt-2 w-full bg-green-500 text-white py-2 rounded" >Buy Now</button>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">I'm Rich Hamper</h2>
+            <img onclick="location.href='hamper5.html'" src="hamper5c.jpeg" alt="Product 2" class="w-full h-80 object-cover rounded-lg">
+            <div class="mt-4 flex justify-between items-center">
+            <span class="text-lg font-semibold">Rs: 2499</span>
+            <button onclick="addToCart(`I'm Rich Hamper`, 2499)" class="bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+            </div>
+            <button onclick="location.href='buy.html?amount=999'" class="mt-2 w-full bg-green-500 text-white py-2 rounded" >Buy Now</button>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">Blissful Surprise Basket</h2>
+            <img onclick="location.href='hamper6.html'" src="hamper6a.jpeg" alt="Product 2" class="w-full h-80 object-cover rounded-lg">
+            <div class="mt-4 flex justify-between items-center">
+            <span class="text-lg font-semibold">Rs: 2499</span>
+            <button onclick="addToCart(`Blissful Surprise Basket`, 2499)" class="bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+            </div>
+            <button onclick="location.href='buy.html?amount=999'" class="mt-2 w-full bg-green-500 text-white py-2 rounded" >Buy Now</button>
+        </div>
+        
+        
+        </div>
+        </main>
+        </section>
+
+        <section id="contact" class="mt-12 bg-white p-6 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <p>Phone: +91 7975168369 </p>
+            <p>Email: ninagagijs@gmail.com</p>
+            </section>
+            
+            <!-- Footer Section -->
+            <footer class="bg-gray-800 text-white text-center p-4">
+            <p>&copy; 2025 Ninagagi Store. All Rights Reserved.</p>
+            </footer>
+            
+            <script src="script.js"></script>
+</body>
+</html>
